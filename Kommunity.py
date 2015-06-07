@@ -3,7 +3,7 @@ __author__ = 'Vijaysrinivas Rajagopal'
 import os
 from Snitch import JSONFetcher
 from Snitch import FileAway
-import  json
+import json
 
 
 print("Small tool for retrieving your noobis- er, I mean, lasting memories of Battlefield Play4Free in the form of "
@@ -17,6 +17,16 @@ instancer.language = language
 uno = instancer.grabStarter()
 writer = FileAway()
 i = 0
+invalidchar = ['<', '>', ':', '\"', '/', '\\', '|', '?', '*']
+temp = uno[0]['name']
+firstname = ""
+
+for ly in invalidchar:
+    firstname = uno[0]['name'].replace(ly, "_")
+    if firstname != temp:
+        break
+    else:
+        continue
 
 with open("log.txt", "w") as rotter:
     z = 0
@@ -51,7 +61,8 @@ for x in instancer.profileid:
 with open("Profile_SoldierInfo.json", 'w') as outfile:
     json.dump(uno, outfile)
 
-writer.zipcreate(uno[0]['name'], instancer.profileid)
+writer.zipcreate(firstname, instancer.profileid)
+#os.rename("./{0}.zip".format(firstname), "./Captured/{0}.zip".format(firstname))
 
 input("Enter any input to exit")
 
