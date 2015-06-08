@@ -1,6 +1,6 @@
 # Aurevoir - P4F JSON Fetcher
 
-Since P4F's services are going down on June 14th, I quickly created my last mini-project for it. Aurevoir fetches majority of the well known JSON files that power the P4F Profile Pages.
+Since P4F's services are going down on July 14th, I quickly created my last mini-project for it. Aurevoir fetches majority of the well known JSON files that power the P4F Profile Pages.
 
 ###What is being fetched:
 - Initial User Info - /profile/soldiers/...
