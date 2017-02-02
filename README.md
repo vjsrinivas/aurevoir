@@ -1,3 +1,5 @@
+# [late update: since `Battlefield Play4Free` has shut down, this service is of no use anymore]
+------
 # Aurevoir - P4F JSON Fetcher
 
 Since P4F's services are going down on July 14th, I quickly created my last mini-project for it. Aurevoir fetches majority of the well known JSON files that power the P4F Profile Pages.
